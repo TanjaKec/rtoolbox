@@ -8,10 +8,10 @@ weight: 1
 
 **R** is a dialect of **S** language that was developed in 1976 by *Rick Becker* and *John Chambers* at the  Bell Laboratories.
 
-*Rick Becker* gave an excellent keynote talk *"Forty Years of S"* at UseR!2016 conference:   
-[Rick Becker @ UseR!2016](http://blog.revolutionanalytics.com/2016/07/rick-becker-s-talk.html) where he talked about development of **S** language that gives explanations for many characteristics of **R** as we know it, including "<-" assignment operator.
+*Rick Becker* gave an excellent keynote talk *"Forty Years of S"* at the UseR!2016 conference:   
+[Rick Becker @ UseR!2016](http://blog.revolutionanalytics.com/2016/07/rick-becker-s-talk.html) where he talked about the development of **S** language that gives explanations for many characteristics of **R** as we know it, including "<-" assignment operator.
 
-1993 Bell Labs gave StatSci (later Insightful Corp.) an exclusive license to develop and sell the **S** language. Insightful sold its implementation of the **S** language under the product name **S-PLUS**.
+1993 Bell Labs gave StatSci (later Insightful Corp.) an exclusive licence to develop and sell the **S** language. Insightful sold its implementation of the **S** language under the product name **S-PLUS**.
 
 You can read more about the [history of S, R, and S-PLUS](https://www.whoishostingthis.com/resources/s-plus/)
 
@@ -27,7 +27,6 @@ Currently **R** is developed by the **R Development Core Team**, of which *John 
 
 To start using R you need to install it! 😃
 
-
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)
 

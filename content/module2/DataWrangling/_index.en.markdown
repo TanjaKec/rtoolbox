@@ -112,7 +112,7 @@ head(gapminder, n=10)
 ## 10 Afghanistan Asia       1997    41.8 22227415      635.
 ```
 
-Can you tell what each of the two functions does⁉️
+Can you tell what each of the two functions does?! 
 
 Do we have the information about the structure of the data? 🤔 We can examine the structure using <span style="color:red">`str()`</span> function, but the **output could look messy** and hard to follow if the data set is big. 🤪
 
@@ -250,7 +250,7 @@ but it's less intuitive and often requires more typing.
 
 <img src="images/mutate().png" width="400px" />
 
-It would allow you to add to the data frame `df` a new column, `z`, which is the multiplication of the columns `x` and `y`: `mutate(df, z = x * y)`.
+It will allow you to add to the data frame `df` a new column, `z`, which is the multiplication of the columns `x` and `y`: `mutate(df, z = x * y)`.
 If we would like to observe `lifeExp` measured in months we could create a new column `lifeExp_month`: 
 
 ```r
@@ -515,7 +515,7 @@ gapminder %>%
 
 #### Let's `%>%` all up!
 
-You can try to get into a habit of using a shortcut for the pipe operator 
+You can try to get into the habit of using a shortcut for the pipe operator 
 <img src="images/pipe_short_cut.png" width="450px" style="display: block; margin: auto;" />
 
 ##### 🗣👥 Confer with your neighbours: 
@@ -545,13 +545,13 @@ The `tidyr` can help you to create **tidy data**. Tidy data is data where:
 
 The `tidyr` package embraces the **principles of tidy data** and provides the standard key functionalities to organise data values within a dataset.
 
-[Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of data cleaning process and structuring datasets to facilitate data analysis.
+[Hadley Wickham](http://hadley.nz/) the author of the `tidyr` package talks in his paper [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) about the importance of the data cleaning process and structuring datasets to facilitate data analysis.
 
 Real datasets, that you are most likely to download from <https://data.gov.rs/> or any other open source data platform, would often violate the three precepts of tidy data in all kinds of different ways:
 
 - Variables would not have their names and column headers are values.
 -	A number of variables are stored in one column
--	A single variable that is stored in several columns 
+-	A single variable is stored in several columns 
 -	Same information stored multiple times as different variables
  
 to name a few.
@@ -644,7 +644,7 @@ Those names look very messy. We could use function from [`stringr`](https://stri
 
 ```r
 ## If you don't have stringr installed yet, uncomment and run the line below
-#install.packeges("stringr")
+#install.packages("stringr")
 library(stringr)
 new_no2$place <- new_no2$place %>% 
     str_sub(end = -5)
@@ -678,10 +678,10 @@ new_no2 %>%
 ## 7 U.ice.                365
 ```
 
-It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder why many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and more experience you gain the easier and less painful it gets.
+It still doesn't look right. 😟 This could be a tedious job. 😥 It is no wonder that many data analysts grumble about time spent on the process of cleaning and preparing the data. It could be a very long and time consuming process, but the more you do it and the more experience you gain the easier and less painful it gets.
 
 
-Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it could easily be done when using `forcats::fct_recode()` function.
+Perhaps, you can try to explore other available packages in R that could help you with organising your data into your ideal format. To give you an idea we will show you how it can easily be done when using `forcats::fct_recode()` function.
 
 
 ```r
@@ -713,7 +713,7 @@ glimpse(new_no2)
 By now, you should have gained enough knowledge in using R to give you the necessary confidence to start exploring other functions of the [`tidyr`](https://tidyr.tidyverse.org/) package. You should not stop there, but go beyond and explore the whole of the [`tidyverse`](https://www.tidyverse.org/) opinionated collection of R packages for data science. 😇🎶
 {{% /notice %}}
 
-To learn more about **tidy data in r** chgeck [Data Tidying](https://garrettgman.ithuthe b.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
+To learn more about **tidy data in r** check [Data Tidying](https://garrettgman.ithuthe b.io/tidying/) section from the famous [Data Science with R](https://garrettgman.github.io) by [Garrett Grolemund](https://resources.rstudio.com/authors/garrett-grolemund)
 
 {{% notice tip %}}
 Have you tried learning data science by posting your questions and discussing it with other people within the R community? 👥💻📊📈🗣 [RStudio Community](https://community.rstudio.com)
@@ -744,4 +744,4 @@ Practise by doing the following set of exercises:
 [Data Transformation with dplyr cheat sheet](https://4.files.edl.io/b9e2/07/12/19/142839-a23788fb-1d3a-4665-9dc4-33bfd442c296.pdf)
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 Tatjana Kecojevic

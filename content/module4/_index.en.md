@@ -20,4 +20,4 @@ weight: 5
 *	[LaTex](https://www.latex-project.org) to incorporate mathematical expressions
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

@@ -3,20 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/sr/general/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/general/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="sr"
-                href="/sr/general/"
-                />
-  </url>
-  
-  <url>
     <loc>/sr/categories/</loc>
     <xhtml:link
                 rel="alternate"

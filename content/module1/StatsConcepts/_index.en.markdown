@@ -86,10 +86,10 @@ The ideas and concepts for examining population data provide a framework for the
 For an attribute variable the number of occurrences of each attribute is obtained, and for a measured variable the sample descriptive statistics describing the centre, width and symmetry of the distribution are calculated. 
 
 **attribute:**
-<img src="/module1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+<img src="/day1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
 **measured:**
-<img src="/module1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="/day1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 #### What does the distribution show?
 
@@ -117,7 +117,7 @@ By analogy with the median it is possible to define the <span style="color:red">
 
 The diagram below shows this pictorially:
 
-<img src="/module1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="/day1/StatsConcepts/_index.en_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 🤓💡 Conventionally the **mean and standard deviation** are given together as one pair of measures of location and spread, and the **median and inter-quartile range** as another pair of measures.
 
@@ -161,7 +161,7 @@ An **explanatory** variable is a variable that may influence the response variab
 
 In general there are four different combinations of type of Response Variable and type of Explanatory Variable. These four combinations are shown below:
 
-![Relationship](/module1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
+![Red variant](/day1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
 
 The starting point for any  <span style="color:red">investigation of the connections</span> between a **response** variable and an **explanatory** variable starts with examining the variables, and defining the response variable, or response variables, and the explanatory variables.
 
@@ -199,7 +199,7 @@ ii)	Yes there is evidence of a relationship, in which case the link needs to be 
 
 This process can be represented diagrammatically as:
 
-![DA Methodology](/module1/StatsConcepts/images/DAMethodology.png?width=40pc)
+![Red variant](/day1/StatsConcepts/images/DAMethodology.png?width=40pc)
 
 For each of the four data analysis situations given, the data analyst needs to know what constitutes the Initial Data Analysis (I.D.A.) and how to undertake and interpret the I.D.A. If Further Data Analysis is required the analyst needs to know how to undertake and interpret the Further Data Analysis.
 
@@ -211,7 +211,7 @@ Given a measured response and an attribute explanatory variable with two levels,
 
 This can be illustrated as below:
 
-![MvA Methodology](/module1/StatsConcepts/images/MvAMethodology.png?width=40pc)
+![Red variant](/day1/StatsConcepts/images/MvAMethodology.png?width=40pc)
 
 
 #### Measured Vs Measured
@@ -269,7 +269,7 @@ The definition and interpretation of `R_sq` is a very important tool in the data
 
 We can put those ideas into our DA Methodology frameworks as shown below.
 
-![MvM Methodology](/module1/StatsConcepts/images/MvMMethodology.png?width=40pc)
+![Red variant](/day1/StatsConcepts/images/MvMMethodology.png?width=40pc)
 
 🤓💡 Note that you will hardly ever be in the situation in which R_sq would be so close to zero that would make you conclude that on the basis of the sample evidence used in IDA it is possible to conclude that there is no relationship between the two variables. If R_sq value is very small (for example around 2%) this would need to be further tested to conclude if it is statistically significant based on the sample evidence by applying FDA.
 
@@ -328,5 +328,8 @@ Make sure you can answer the following questions:
   i) a measured response variable and a measured explanatory variable?
 
 
+
+
+
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2019 Tatjana Kecojevic

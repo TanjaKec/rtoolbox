@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/en/module3/principlesvisualisation/</loc>
-    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/module4/rmarkdown/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -34,16 +29,6 @@
   
   <url>
     <loc>/en/general/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="sr"
-                href="/sr/general/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/general/"
-                />
   </url>
   
   <url>
@@ -53,6 +38,11 @@
   
   <url>
     <loc>/en/general/instructor/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/module3/principlesvisualisation/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   

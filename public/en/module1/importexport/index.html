@@ -12,20 +12,20 @@
     <title>Import Data to R :: Rtoolbox</title>
 
     
-    <link href="/css/nucleus.css?1583930168" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1583930168" rel="stylesheet">
-    <link href="/css/hybrid.css?1583930168" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1583930168" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1583930168" rel="stylesheet">
-    <link href="/css/auto-complete.css?1583930168" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1583930168" rel="stylesheet">
-    <link href="/css/theme.css?1583930168" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1583930168" rel="stylesheet">
+    <link href="/css/nucleus.css?1585918726" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1585918726" rel="stylesheet">
+    <link href="/css/hybrid.css?1585918726" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1585918726" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1585918726" rel="stylesheet">
+    <link href="/css/auto-complete.css?1585918726" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1585918726" rel="stylesheet">
+    <link href="/css/theme.css?1585918726" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1585918726" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1583930168" rel="stylesheet">
+      <link href="/css/theme-blue.css?1585918726" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1583930168"></script>
+    <script src="/js/jquery-3.3.1.min.js?1585918726"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1583930168"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1583930168"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1585918726"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1585918726"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/en";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1583930168"></script>
+<script type="text/javascript" src="/js/search.js?1585918726"></script>
 
     
   </div>
@@ -531,7 +531,7 @@
  
   
     
-    <li data-nav-id="/en/module3/principlesvisualisation/" title="Introduction to Visualisation Principles" class="dd-item 
+    <li data-nav-id="/en/module3/principlesvisualisation/" title="Principles of Visualisation" class="dd-item 
         
         
         
@@ -1041,7 +1041,7 @@
 <li>MiniTab</li>
 <li>SPSS&hellip;</li>
 </ul>
-<p>In this section we will show you how to access most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic <code>read</code> data functionality in R.</p>
+<p>In this section we will show you how to access the most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic <code>read</code> data functionality in R.</p>
 <h3 id="the-r-base">the R base</h3>
 <p>The simplest data form is a <a href="https://en.wikipedia.org/wiki/Text_file">text file</a>. Text files can be read by any computer operating system and by almost all different kind of statistical programs. Saving data as a text file makes your data highly accessible. If you have a text data file you wish to use, you can easily import it with <strong>the R base</strong> functions <code>read.table()</code></p>
 <p>This reads a file in table format and creates a data frame from it</p>
@@ -1105,7 +1105,7 @@ df_xl &lt;- read_excel(&quot;nez-opendata-20199-20190925.xlsx&quot;, sheet = 1)
 
 <p>Explore the arguments of the <code>read_excel()</code> function, such as the <code>skip</code> argument through which you can specify a minimum number of rows to skip before reading anything.</p>
 <h3 id="importing-data-using-jsonlite">Importing data using <code>jsonlite</code></h3>
-<p>When accessing JSON file in R using the <code>jsonlite</code> package you need to point to the file by providing the local path if the file is downloaded or by the URL from where it could be accessed.</p>
+<p>When accessing a JSON file in R using the <code>jsonlite</code> package you need to point to the file by providing the local path if the file is downloaded or by the URL from where it can be accessed.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e">## If you don&#39;t have readxl installed yet, uncomment the line below and run it </span>
 <span style="color:#75715e">#install.packages(&#34;jsonlite&#34;)</span>
 <span style="color:#a6e22e">library</span>(jsonlite)
@@ -1114,7 +1114,7 @@ polen <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJ
 </code></pre></div><p>Check the structure of the <code>polen</code>! 😰</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">str</span>(polen)
 </code></pre></div><pre><code>## List of 4
-##  $ count   : int 26419
+##  $ count   : int 27687
 ##  $ next    : chr &quot;http://polen.sepa.gov.rs/api/opendata/pollens/?page=2&quot;
 ##  $ previous: NULL
 ##  $ results :'data.frame':	500 obs. of  4 variables:
@@ -1239,7 +1239,7 @@ polen <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJ
 </li>
 </ol>
 <hr>
-<p>© 2019 <a href="https://sisteranalyst.org">Siste Analyst</a></p>
+<p>© 2020 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
 
 
 
@@ -1754,19 +1754,19 @@ polen <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fromJ
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1583930168"></script>
-    <script src="/js/perfect-scrollbar.min.js?1583930168"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1583930168"></script>
-    <script src="/js/jquery.sticky.js?1583930168"></script>
-    <script src="/js/featherlight.min.js?1583930168"></script>
-    <script src="/js/highlight.pack.js?1583930168"></script>
+    <script src="/js/clipboard.min.js?1585918726"></script>
+    <script src="/js/perfect-scrollbar.min.js?1585918726"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1585918726"></script>
+    <script src="/js/jquery.sticky.js?1585918726"></script>
+    <script src="/js/featherlight.min.js?1585918726"></script>
+    <script src="/js/highlight.pack.js?1585918726"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1583930168"></script>
-    <script src="/js/learn.js?1583930168"></script>
-    <script src="/js/hugo-learn.js?1583930168"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1585918726"></script>
+    <script src="/js/learn.js?1585918726"></script>
+    <script src="/js/hugo-learn.js?1585918726"></script>
 
-    <link href="/mermaid/mermaid.css?1583930168" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1583930168"></script>
+    <link href="/mermaid/mermaid.css?1585918726" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1585918726"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -33,7 +33,9 @@ As soon as sample data is used, the information contained within the sample is *
 
 The importance of working with representative samples should be seriously considered; a good way to appreciate this importance is to see the consequences of using unrepresentative samples. A book by [Darrell Huff](https://en.wikipedia.org/wiki/Darrell_Huff) called [How to Lie with Statistics](https://en.wikipedia.org/wiki/How_to_Lie_with_Statistics), published by [Penguin](https://www.penguin.co.uk/) contains several anecdotes of unrepresentative samples and the consequences of treating them as representative.
 
-#### Data Analysis Using Sample Data
+___
+
+**Data Analysis Using Sample Data**
 
 Usually the data will have been collected in response to some perceived problem, in the hope of being able to glean some pointers from this data that will be helpful in the analysis of the problem. Data is commonly presented to the data analyst in this way with a request to analyse the data.
 
@@ -52,8 +54,8 @@ i) **Do I understand the problem** under investigation and are the objectives of
 
 ii) Do I understand exactly **what each variable is measuring/recording?**
 
-
-### Describing Variables
+___
+**Describing Variables**
 
 A starting point is to examine the characteristics of each individual variable in the data set. 
 
@@ -75,8 +77,8 @@ A common way of handling attribute data is to give it a numerical code. Hence, w
 
 There are two types of measured variables, a measured variable that is measured on some continuous scale of measurement, e.g. a person’s height. This type of measured variable is called a *continuous variable*.  The other type of measured variable is a *discrete variable*. This results from counting; for example 'the number of passengers on a given flight'. 
 
-
-### The Concept of Statistical Distribution
+___
+**The Concept of Statistical Distribution**
 
 **The concept of statistical distribution is central to statistical analysis.**
 
@@ -106,7 +108,8 @@ abline(v = 0, col="red", lwd=2, lty=2)
 abline(v = c(-1,1), col="blue", lwd=2, lty=3)
 ```
 
-#### What does the distribution show?
+___
+**What does the distribution show?**
 
 For an attribute variable it is very simple. We observe the frequency of occurrence of each level of the attribute variable as shown in the barplot above.
 
@@ -147,7 +150,7 @@ boxplot(xseq, horizontal=TRUE,  outline=TRUE,ylim=c(-4,4), frame=F, col = "darko
 
 🤓💡 Conventionally the **mean and standard deviation** are given together as one pair of measures of location and spread, and the **median and inter-quartile range** as another pair of measures.
 
-There are a number of <span style="color:red">**measures of symmetry**</span>; the simplest way to measure symmetry is to compare the mean and the median.  For a perfectly symmetric distribution the mean and the median will be exactly the same. This idea leads to the definition of Pearson's coefficient of Skewness as:
+There are a number of <span style="color:red">**measures of symmetry**</span>; the simplest way to measure symmetry is to compare the mean and the median.  For a perfectly symmetrical distribution the mean and the median will be exactly the same. This idea leads to the definition of Pearson's coefficient of Skewness as:
 
  `Pearson's coefficient of Skewness = 3(mean - median) / standard deviation`
 
@@ -155,7 +158,8 @@ An alternative measure of Skewness is the Quartile Measure of Skewness defined a
 
 `Quartile Measure of Skewness  = [(Q1 - Q3) - (Q2 - Q1)]/(Q3 - Q1)`
 
-### Important Key Points:
+___
+**Important Key Points:**
 
 - What is Data?
 - Variables
@@ -175,7 +179,8 @@ An alternative measure of Skewness is the Quartile Measure of Skewness defined a
 
 The descriptive statistics provide a numerical description of the key parameters of the distribution of a measured sample variable.
 
-### Investigating the relationship between variables
+___
+**Investigating the relationship between variables**
 
 One of the key steps required of the Data Analyst is to investigate the relationship between variables. This requires a further **classification of the variables** contained within the data, as either a <span style="color:red">**response**</span> variable or an <span style="color:red">**explanatory**</span> variable.  
 
@@ -183,19 +188,20 @@ A **response** variable is a variable that measures either directly or indirectl
 
 An **explanatory** variable is a variable that may influence the response variable.
 
-#### Bivariate Relationships
+**Bivariate Relationships**
 
 In general there are four different combinations of type of Response Variable and type of Explanatory Variable. These four combinations are shown below:
 
-![Relationship](/module1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
+![DA Matrix](/module1/StatsConcepts/images/RelationshipMatrix.png?width=30pc)
 
 The starting point for any  <span style="color:red">investigation of the connections</span> between a **response** variable and an **explanatory** variable starts with examining the variables, and defining the response variable, or response variables, and the explanatory variables.
 
 🤓💡: In large empirical investigations there may be a number of objectives and a number of response variables.
 
-The method for investigating the connections between a response variable and an explanatory variable depends on the type of variables. The methodology is different for combination as shown in the box above, and applying an inappropriate method causes problems. 💡⚡️😩  
+The method for investigating the connections between a response variable and an explanatory variable depends on the type of variables. The methodology is different for combinations as shown in the box above, and applying an inappropriate method causes problems. 💡⚡️😩  
 
-### DA Methodology
+___
+**DA Methodology**
 
 The first step is to have a clear idea of what is meant by a connection between the response variable and the explanatory variable.  This will provide a framework for defining a <span style="color:red">Data-Analysis process</span> to explore the connection between the two variables, and will utilise the ideas previously developed. 
 
@@ -225,81 +231,84 @@ ii)	Yes there is evidence of a relationship, in which case the link needs to be 
 
 This process can be represented diagrammatically as:
 
-![DA Methodology](/module1/StatsConcepts/images/DAMethodology.png?width=40pc)
+![](/module1/StatsConcepts/images/DAMethodology.png?width=40pc)
 
 For each of the four data analysis situations given, the data analyst needs to know what constitutes the Initial Data Analysis (I.D.A.) and how to undertake and interpret the I.D.A. If Further Data Analysis is required the analyst needs to know how to undertake and interpret the Further Data Analysis.
 
-#### Measured Vs Attribute(2-levels)
+___
+**Measured Vs Attribute(2-levels)**
 
 There is a relationship between a measured response and an attribute explanatory variable if the average value of the response is dependent on the level of the attribute explanatory variable.
 
-Given a measured response and an attribute explanatory variable with two levels, "<span style="color:red">red</span>" & "<span style="color:blue">blue</span>". If the statistical distribution of the response variable for attribute level "<span style="color:red">red</span>" and attribute level "<span style="color:blue">blue</span>" are exactly the same then the level of the attribute variable has no influence on the value response, there is no relationship.  
+Given a measured response and an attribute explanatory variable with two levels, "<span style="color:red">red</span>" & "<span style="color:blue">blue</span>", if the statistical distribution of the response variable for attribute level "<span style="color:red">red</span>" and attribute level "<span style="color:blue">blue</span>" are exactly the same then the level of the attribute variable has no influence on the value response, there is no relationship.  
 
 This can be illustrated as below:
 
-![MvA Methodology](/module1/StatsConcepts/images/MvAMethodology.png?width=40pc)
+![Red variant](/module1/StatsConcepts/images/MvAMethodology.png?width=40pc)
 
+___
+**Measured Vs Measured**
 
-#### Measured Vs Measured
+The first step is to have a clear idea of what is meant by a connection between a measured response variable and a measured explanatory variable. Imagine a population under study consisting of a very large number of population members, and on each population member two measurements are made, the value of $Y$ the response variable and the value of $X$ the explanatory variable. For the whole population a graph of $Y$ against $X$ could be plotted conceptually. 
 
-The first step is to have a clear idea of what is meant by a connection between a measured response variable and a measured explanatory variable. Imagine a population under study consisting of a very large number of population members, and on each population member two measurements are made, the value of Y the response variable and the value of X the explanatory variable. For the whole population a graph of Y against X could be plotted conceptually. 
-
-If the graph shows a perfect line, then there is quite clearly a link between Y and X. If the value of X is known, the exact value of Y can be read off the graph. This is an unlikely scenario in the data-analysis context, because this kind of relationship is a *deterministic relationship*. Deterministic means that if the value of X is known then the value of Y can be precisely determined from the relationship between Y and X.
-What is more likely to happen is that other variables may also have an influence on Y. 
+If the graph shows a perfect line, then there is quite clearly a link between $Y$ and $X$. If the value of $X$ is known, the exact value of $Y$ can be read off the graph. This is an unlikely scenario in the data-analysis context, because this kind of relationship is a *deterministic relationship*. Deterministic means that if the value of $X$ is known then the value of Y can be precisely determined from the relationship between Y and $X$.
+What is more likely to happen is that other variables may also have an influence on $Y$. 
 
 If the nature of the link between Y and X is under investigation then this could be represented as:
 
-`Y = f(X) + effect` of all other variables [effect of all other variables is commonly abbreviated to e]
+$Y = f(X) + effect$ of all other variables [effect of all other variables is commonly abbreviated to $e$]
 
 Considered the model:
 
-`Y = f(X) + e`		[e is the effect of all other variables]
+$$Y = f(X) + e \text{		[e is the effect of all other variables]}$$
 
 The influence on the response variable Y can be thought of as being made up of two components:
 
-i) the component of Y that is explained by changes in the value of X, [the part due to changes in X through f(X)] 
+i) the component of Y that is explained by changes in the value of X, [the part due to changes in $X$ through $f(X)$] 
 
-ii)	the component of Y that is explained by changes in the other factors.  [the part not explained by changes in X]
+ii)	the component of Y that is explained by changes in the other factors.  [the part not explained by changes in $X$]
 
 Or in more abbreviated forms the '<span style="color:red">Variation in Y Explained by changes X</span>' or '<span style="color:red">**Explained Variation**</span>' and the '<span style="color:red">Variation in Y not explained by changes in X</span>' or the '<span style="color:red">**Unexplained Variation**</span>'. 
 
 In conclusion, the *Total Variation in Y* is made up of the two components:
 
-- the 'Changes in Y Explained by changes in X' and  
-- the 'Changes in Y not explained by changes in X' 
+- the $Changes in Y Explained by changes in X$ and  
+- the $Changes in Y not explained by changes in X$ 
 
 Which may be written as:
 
-	`'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'`
+$$\text{The Total Variation in Y = Explained Variation + Unexplained Variation}$$
 
 🤓💡 The discussion started with the following idea:
 
-Y = f(X) + e
+$$Y = f(X) + e$$
 
-And to quantify the strength of the link the influence on Y was broken down into two components:
+And to quantify the strength of the link the influence on $Y$ was broken down into two components:
 
-	'The Total Variation in Y' = 'Explained Variation' + 'Unexplained Variation'
+	$$\text{The Total Variation in Y = Explained Variation + Unexplained Variation}$$
 
 This presents two issues:
+
 A:	Can a model of the link be made?
-B.	Can 'The Total Variation in Y', 'Explained Variation' and the 'Unexplained Variation' be measured?
+B.	Can The $Total Variation in Y$, $Explained Variation$ and the $Unexplained Variation$ be measured?
 
 What do these quantities tell us?  
 
-Maybe we can observe a proportion of the 'Explained Variation in Y' over the 'Total Variation in Y'.
-This ratio is always on the scale 0 to 1, but by convention is usually expressed as a percentage so is regarded as on the scale 0 to 100%.  It is called 'R Squared' and interpretation of this ratio is as follows:
+Maybe we can observe a proportion of the $Explained Variation in Y$ over the $Total Variation in Y$.
+This ratio is always on the scale $0$ to $1$, but by convention is usually expressed as a percentage so is regarded as on the scale $0$ to $100\%$.  It is called $R^2$ and interpretation of this ratio is as follows:
 
-  R_sq: 0% (no link) <--------------- 50% (Statistical Link) ---------------> 100% (Perfect Link) 
+  $$R^2: 0\% \text{ (no link) <--------------- } 50\% \text{(Statistical Link) ---------------> }100\%\text{ (Perfect Link)}$$ 
 
 The definition and interpretation of `R_sq` is a very important tool in the data analyst's tool kit for tracking connections between a measured response variable and a measured explanatory variable.
 
 We can put those ideas into our DA Methodology frameworks as shown below.
 
-![MvM Methodology](/module1/StatsConcepts/images/MvMMethodology.png?width=40pc)
+![Red variant](/module1/StatsConcepts/images/MvMMethodology.png?width=40pc)
 
-🤓💡 Note that you will hardly ever be in the situation in which R_sq would be so close to zero that would make you conclude that on the basis of the sample evidence used in IDA it is possible to conclude that there is no relationship between the two variables. If R_sq value is very small (for example around 2%) this would need to be further tested to conclude if it is statistically significant based on the sample evidence by applying FDA.
+🤓💡 Note that you will hardly ever be in the situation in which $R^2$  would be so close to zero that would make you conclude that on the basis of the sample evidence used in IDA it is possible to conclude that there is no relationship between the two variables. If $R^2$ value is very small (for example around $2\%$) this would need to be further tested to conclude if it is statistically significant based on the sample evidence by applying FDA.
 
-#### Further Data Analysis
+___
+**Further Data Analysis**
 
 If the <span style="color:red">'**Initial Data Analysis**'</span> is <span style="color:red">*inconclusive*</span> then <span style="color:red">'**Further Data Analysis**'</span> is required. 
 
@@ -319,7 +328,7 @@ All hypothesis tests are carried out in four stages:
 
 - Stage 4:		The conclusions.
 
-##### Statistical Models used in FDA
+**Statistical Models used in FDA**
 
 * Measured Response v Attribute Explanatory Variable with exactly two levels:
   
@@ -339,7 +348,8 @@ All hypothesis tests are carried out in four stages:
 * Attribute Response v Attribute Explanatory Variable
   - Chi-Square Test of Independence
 
-## YOUR TURN 👇
+___
+**YOUR TURN 👇**
 
 Make sure you can answer the following questions:
 
@@ -354,5 +364,8 @@ Make sure you can answer the following questions:
   i) a measured response variable and a measured explanatory variable?
 
 
+
+
+
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

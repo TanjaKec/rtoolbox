@@ -8,7 +8,7 @@ weight: 4
 
 When you open RStudio for the first time it will be split into three sections. Each section has its own tab with shortcuts for the relevant options available from the main RStudio menu. 
 
-![RStudioWindow](/module1/RStudioIDE/images/RStudioWindow.png?width=40pc)
+![Red variant](/day1/RStudioIDE/images/RStudioWindow.png?width=40pc)
 
 - The tall <span style="color:red">**red section**</span>  on the left is the <span style="color:red">Console</span> and that’s where you can type in R code to execute.
 This code is also called commands or functions.
@@ -18,10 +18,10 @@ This code is also called commands or functions.
 - In the <span style="color:#FF00FF">**bottom right section**</span> there are tabs to flip through the <span style="color:#FF00FF">Files</span> and folder structure of your computer (like in Finder or Explorer), <span style="color:#FF00FF">Help</span> information etc.
 
 {{% notice tip %}}
-🤓💡: You might find it useful bookmarking the link for [RStudio IDE Cheet Sheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)!
+🤓💡: You might find it useful bookmarking the link for [RStudio IDE Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf)!
 {{% /notice %}}
 
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)
 

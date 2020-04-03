@@ -24,6 +24,6 @@ Let us take boring flat data and bring it to life through visualization."
 
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)
 
 

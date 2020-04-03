@@ -61,9 +61,9 @@ This course is designed for anyone who needs to communicate information to someo
 
 Prior experience is not required.
 
-The course will be delivered in English and Serbian!
+> The course will be delivered in English and Serbian!
 
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)
 

@@ -180,7 +180,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_smooth(method = "loess", se = F, col = "limegreen") + 
  
   # give a title an label axes
-  labs(title = "Life Exp. vs. Population Size", 
+  labs(title = "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   
   # modify the appearance
@@ -217,7 +217,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   
   geom_smooth(method = "lm", se = F, col = "maroon3") + 
   geom_smooth(method = "loess", se = F, col = "dodgerblue3") + 
-  labs (title= "Life Exp. vs. Population Size", 
+  labs (title= "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   theme(legend.position = "right", 
         panel.border = element_rect(fill = NA, 
@@ -241,7 +241,7 @@ Note that the legend is added automatically. You can remove it by setting the **
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = "lm", se = F, col = "maroon3") + 
   geom_smooth(method = "loess", se = F, col = "dodgerblue3") + 
-  labs (title= "Life Exp. vs. Population Size", 
+  labs (title= "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   theme(legend.position = "right", 
         panel.border = element_rect(fill = NA, 
@@ -280,7 +280,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = "lm", se = F, col = "maroon3") + 
   geom_smooth(method = "loess", se = F, col = "dodgerblue3") + 
-  labs (title= "Life Exp. vs. Population Size", 
+  labs (title= "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   theme(legend.position = "right", 
         panel.border = element_rect(fill = NA, 
@@ -291,7 +291,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_text(x = 90000, y = 75, label = "smooth line", col = "dodgerblue3") +
   
   # change breaks and label them 
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "100K", "120K")) +
 
   # change color palette
   scale_colour_brewer(palette = "Set1") + 
@@ -304,13 +304,13 @@ There is a `ggthemes` library of themes that willhelp you create stylish ggplot 
 
 ```{r, echo = TRUE, warnings = FALSE, message = FALSE, fig.height = 6, fig.width = 8, fig.align = 'center'}
 ## If you don't have ggthemes installed yet, uncomment and run the line below
-#install.packeges("ggthemes")
+#install.packages("ggthemes")
 library(ggthemes)
 ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = "lm", se = F, col = "darkred") + 
   geom_smooth(method = "loess", se = F, col = "darkgreen") + 
-  labs (title= "Life Exp. vs. Population Size", 
+  labs (title= "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   theme(legend.position = "right", 
         panel.border = element_rect(fill = NA, 
@@ -319,7 +319,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
         plot.title=element_text(hjust=0.5)) + 
   geom_text(x = 80000, y = 125, label = "regression line", col = "darkred") + 
   geom_text(x = 90000, y = 75, label = "smooth line", col = "darkgreen") +
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "100K", "120K")) +
 
   # Wall Street Journal theme
   scale_colour_wsj() +
@@ -339,14 +339,14 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = "lm", se = F, col = "darkred") + 
   geom_smooth(method = "loess", se = F, col = "black") + 
-  labs (title= "Life Exp. vs. Population Size", 
+  labs (title= "GDP per Capita vs. Population Size", 
         x = "population", y = "Life Exp.") + 
   theme(legend.position = "right", 
         panel.border = element_rect(fill = NA, 
                                     colour = "black",
                                     size = .75),
         plot.title=element_text(hjust=0.5)) + 
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "10K", "12K")) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c("0", "20K", "40K", "60K", "80K", "100K", "120K")) +
   scale_colour_wsj() +
   theme_wsj() +
   
@@ -427,7 +427,8 @@ glimpse(new_no2)
 ```{r}
 new_no2 %>% 
   group_by(place) %>% 
-  summarise(mean_no2 = mean(!is.na(no2))) %>% # !is.na(): is not NA; omits the missing values
+  filter(!is.na(no2)) %>% 
+  summarise(mean_no2 = mean(no2)) %>% # !is.na(): is not NA; omits the missing values
   ggplot(aes(x = place, y = mean_no2, fill = place)) + # fill: colours each bar differently   
     geom_bar(stat = "identity") +
     xlab("Place") + 
@@ -471,5 +472,6 @@ Practise by doing the following set of exercises:
 
 [ggplot as a creativity engine](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
 
------------------------------
-© 2020 Tatjana Kecojevic
+---------------------------
+--
+© 2020 [Sister Analyst](https://sisteranalyst.org)

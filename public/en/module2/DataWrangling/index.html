@@ -12,20 +12,20 @@
     <title>Data Wrangling :: Rtoolbox</title>
 
     
-    <link href="/css/nucleus.css?1583930168" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1583930168" rel="stylesheet">
-    <link href="/css/hybrid.css?1583930168" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1583930168" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1583930168" rel="stylesheet">
-    <link href="/css/auto-complete.css?1583930168" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1583930168" rel="stylesheet">
-    <link href="/css/theme.css?1583930168" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1583930168" rel="stylesheet">
+    <link href="/css/nucleus.css?1585918726" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1585918726" rel="stylesheet">
+    <link href="/css/hybrid.css?1585918726" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1585918726" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1585918726" rel="stylesheet">
+    <link href="/css/auto-complete.css?1585918726" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1585918726" rel="stylesheet">
+    <link href="/css/theme.css?1585918726" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1585918726" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1583930168" rel="stylesheet">
+      <link href="/css/theme-blue.css?1585918726" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1583930168"></script>
+    <script src="/js/jquery-3.3.1.min.js?1585918726"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1583930168"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1583930168"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1585918726"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1585918726"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/en";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1583930168"></script>
+<script type="text/javascript" src="/js/search.js?1585918726"></script>
 
     
   </div>
@@ -531,7 +531,7 @@
  
   
     
-    <li data-nav-id="/en/module3/principlesvisualisation/" title="Introduction to Visualisation Principles" class="dd-item 
+    <li data-nav-id="/en/module3/principlesvisualisation/" title="Principles of Visualisation" class="dd-item 
         
         
         
@@ -1104,12 +1104,12 @@ dim(gapminder)</code></pre>
 glimpse(gapminder) </code></pre>
 <pre><code>## Observations: 1,704
 ## Variables: 6
-## $ country   &lt;fct&gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan, Af…
-## $ continent &lt;fct&gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, …
-## $ year      &lt;int&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, …
-## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854…
-## $ pop       &lt;int&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 148803…
-## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.…</code></pre>
+## $ country   &lt;fct&gt; Afghanistan, Afghanistan, Afghanistan, Afghanistan, Afghani…
+## $ continent &lt;fct&gt; Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia, Asia,…
+## $ year      &lt;int&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997,…
+## $ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.…
+## $ pop       &lt;int&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 1…
+## $ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134,…</code></pre>
 
 <div class="notices note" ><p>🤓💡: Notice how we can prevent display of the messages that appear when uploading the packages by using, in this case, <!-- raw HTML omitted -->suppressPackageStartupMessages()<!-- raw HTML omitted -->!</p>
 </div>
@@ -1450,7 +1450,7 @@ plot(gapminder_pipe$pop_e6, gapminder_pipe$lifeExp, cex = 0.5, col = &quot;red&q
 <p>to name a few.</p>
 <p>To illustrate this, let us go back onto <a href="https://data.gov.rs/" class="uri">https://data.gov.rs/</a> and access <a href="https://data.gov.rs/sr/datasets/kvalitet-vazduha-2017/">Kvalitet Vazduha 2017</a>. In particular, we want to access <a href="http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv">2017-NO2.csv</a> data.</p>
 <pre class="r"><code>## If you don&#39;t have tidyr installed yet, uncomment and run the line below
-#install.packeges(&quot;tidyr&quot;)
+#install.packages(&quot;tidyr&quot;)
 library(tidyr)
 # access 2017-NO2.csv data
 no2 &lt;- read.csv(&quot;http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv&quot;,
@@ -1460,14 +1460,14 @@ no2 &lt;- read.csv(&quot;http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75
 glimpse(no2)</code></pre>
 <pre><code>## Observations: 365
 ## Variables: 8
-## $ Datum                   &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;…
-## $ Novi.Sad.SPENS.NO2      &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47…
-## $ Beograd.Mostar.NO2      &lt;dbl&gt; 28.83, 39.12, 25.20, 28.48, 27.82, 41.91…
-## $ Beograd.Vraèar.NO2      &lt;dbl&gt; 182.84, 244.56, 147.49, 159.12, 124.16, …
-## $ Beograd.Zeleno.brdo.NO2 &lt;dbl&gt; 36.32, 36.68, 27.00, 35.15, 24.92, 8.27,…
-## $ Kragujevac..NO2         &lt;dbl&gt; 38.92, 43.50, 40.17, 45.44, 43.04, 34.55…
-## $ U.ice..NO2              &lt;dbl&gt; 49.84, 50.34, 36.35, 49.07, 33.33, 39.88…
-## $ Ni..IZJZ.Ni...NO2       &lt;dbl&gt; 18.61, 22.87, 15.68, 21.97, 21.68, 12.11…</code></pre>
+## $ Datum                   &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04…
+## $ Novi.Sad.SPENS.NO2      &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.5…
+## $ Beograd.Mostar.NO2      &lt;dbl&gt; 28.83, 39.12, 25.20, 28.48, 27.82, 41.91, 24.…
+## $ Beograd.Vraèar.NO2      &lt;dbl&gt; 182.84, 244.56, 147.49, 159.12, 124.16, 42.17…
+## $ Beograd.Zeleno.brdo.NO2 &lt;dbl&gt; 36.32, 36.68, 27.00, 35.15, 24.92, 8.27, 12.7…
+## $ Kragujevac..NO2         &lt;dbl&gt; 38.92, 43.50, 40.17, 45.44, 43.04, 34.55, 25.…
+## $ U.ice..NO2              &lt;dbl&gt; 49.84, 50.34, 36.35, 49.07, 33.33, 39.88, 33.…
+## $ Ni..IZJZ.Ni...NO2       &lt;dbl&gt; 18.61, 22.87, 15.68, 21.97, 21.68, 12.11, NA,…</code></pre>
 <p>It shows that this data set has <code>365</code> observations and <code>8</code> variables. Nonetheless, we need to consider what type of information we have here:</p>
 <ul>
 <li><code>date</code> NO2 measurement taken: given in a single column -&gt; ✅ tidy🙂</li>
@@ -1485,9 +1485,9 @@ glimpse(no2)</code></pre>
 glimpse(new_no2)</code></pre>
 <pre><code>## Observations: 2,555
 ## Variables: 3
-## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;0…
-## $ place &lt;fct&gt; Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2…
-## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…</code></pre>
+## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;05.01.…
+## $ place &lt;fct&gt; Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2, Novi.Sad.SPENS.NO2, Nov…
+## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.46, 9…</code></pre>
 <p>Let us see the names of the places</p>
 <pre class="r"><code>new_no2 %&gt;%
      group_by(place) %&gt;%
@@ -1511,9 +1511,9 @@ new_no2$place &lt;- new_no2$place %&gt;%
 glimpse(new_no2)</code></pre>
 <pre><code>## Observations: 2,555
 ## Variables: 3
-## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;0…
-## $ place &lt;chr&gt; &quot;Novi.Sad.SPENS&quot;, &quot;Novi.Sad.SPENS&quot;, &quot;Novi.Sad.SPENS&quot;, &quot;Nov…
-## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…</code></pre>
+## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;05.01.…
+## $ place &lt;chr&gt; &quot;Novi.Sad.SPENS&quot;, &quot;Novi.Sad.SPENS&quot;, &quot;Novi.Sad.SPENS&quot;, &quot;Novi.Sad…
+## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.46, 9…</code></pre>
 <pre class="r"><code>new_no2 %&gt;%
     group_by(place) %&gt;%
     summarise(n())</code></pre>
@@ -1545,9 +1545,9 @@ new_no2 &lt;- no2 %&gt;%
 glimpse(new_no2)</code></pre>
 <pre><code>## Observations: 2,555
 ## Variables: 3
-## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;0…
-## $ place &lt;fct&gt; NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens…
-## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…</code></pre>
+## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;05.01.…
+## $ place &lt;fct&gt; NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_…
+## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.46, 9…</code></pre>
 
 <div class="notices note" ><p>By now, you should have gained enough knowledge in using R to give you the necessary confidence to start exploring other functions of the <!-- raw HTML omitted --><!-- raw HTML omitted -->tidyr<!-- raw HTML omitted --><!-- raw HTML omitted --> package. You should not stop there, but go beyond and explore the whole of the <!-- raw HTML omitted --><!-- raw HTML omitted -->tidyverse<!-- raw HTML omitted --><!-- raw HTML omitted --> opinionated collection of R packages for data science. 😇🎶</p>
 </div>
@@ -1576,7 +1576,7 @@ glimpse(new_no2)</code></pre>
 <p><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling cheat sheet</a></p>
 <p><a href="https://4.files.edl.io/b9e2/07/12/19/142839-a23788fb-1d3a-4665-9dc4-33bfd442c296.pdf">Data Transformation with dplyr cheat sheet</a></p>
 <hr />
-<p>© 2020 Tatjana Kecojevic</p>
+<p>© 2020 <a href="https://sisteranalyst.org">Sister Analyst</a></p>
 
 
 
@@ -2088,19 +2088,19 @@ glimpse(new_no2)</code></pre>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1583930168"></script>
-    <script src="/js/perfect-scrollbar.min.js?1583930168"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1583930168"></script>
-    <script src="/js/jquery.sticky.js?1583930168"></script>
-    <script src="/js/featherlight.min.js?1583930168"></script>
-    <script src="/js/highlight.pack.js?1583930168"></script>
+    <script src="/js/clipboard.min.js?1585918726"></script>
+    <script src="/js/perfect-scrollbar.min.js?1585918726"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1585918726"></script>
+    <script src="/js/jquery.sticky.js?1585918726"></script>
+    <script src="/js/featherlight.min.js?1585918726"></script>
+    <script src="/js/highlight.pack.js?1585918726"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1583930168"></script>
-    <script src="/js/learn.js?1583930168"></script>
-    <script src="/js/hugo-learn.js?1583930168"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1585918726"></script>
+    <script src="/js/learn.js?1585918726"></script>
+    <script src="/js/hugo-learn.js?1585918726"></script>
 
-    <link href="/mermaid/mermaid.css?1583930168" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1583930168"></script>
+    <link href="/mermaid/mermaid.css?1585918726" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1585918726"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

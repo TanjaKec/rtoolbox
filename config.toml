@@ -1,4 +1,4 @@
-baseURL = "https://rtoolbox.netlify.com/"
+baseURL = "https://rtoolbox.rbind.io/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
@@ -25,11 +25,7 @@ url = "logo.jpg"
 #home = [ "HTML", "RSS", "JSON"]
 home = ["HTML"]
 
-[Languages]
-[Languages.en]
-title = "Rtoolbox"
-weight = 1
-languageName = "English"
+
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i>GitHub"
@@ -37,14 +33,4 @@ identifier = "ds"
 url = "https://github.com/SisterAnalyst"
 weight = 10
 
-[Languages.sr]
-title = "RToolbox"
-weight = 2
-languageName = "Serbian"
-
-[[Languages.sr.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
-identifier = "ds"
-url = "https://github.com/matcornic/hugo-theme-learn"
-weight = 10
 

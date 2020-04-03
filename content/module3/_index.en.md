@@ -20,4 +20,4 @@ weight: 4
 * visualising data with maps
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

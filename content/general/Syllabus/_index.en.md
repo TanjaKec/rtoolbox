@@ -92,4 +92,4 @@ weight: 3
 *	Updating your website: serving site, push to [GitHub](https://github.com/), deploy
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

@@ -23,7 +23,7 @@ R can import all types of data:
 - MiniTab
 - SPSS...
 
-In this section we will show you how to access most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic `read` data functionality in R. 
+In this section we will show you how to access the most commonly used data types. Once you start playing with the data and wrangling it in the way it suits you for your analytical manipulations you might find it interesting to explore the options for writing data. Here, we are not going to show you how to do it, but rather focus on basic `read` data functionality in R. 
 
 ### the R base
 
@@ -113,7 +113,7 @@ Explore the arguments of the `read_excel()` function, such as the `skip` argumen
 
 ### Importing data using `jsonlite`
 
-When accessing JSON file in R using the `jsonlite` package you need to point to the file by providing the local path if the file is downloaded or by the URL from where it could be accessed. 
+When accessing a JSON file in R using the `jsonlite` package you need to point to the file by providing the local path if the file is downloaded or by the URL from where it can be accessed. 
 
 ```{r}
 ## If you don't have readxl installed yet, uncomment the line below and run it 
@@ -147,5 +147,6 @@ You can use R with appropriate packages to access other data formats. The `haven
 
 2) Have a look at this data set: [saobracaj](https://data.gov.rs/sr/datasets/podatsi-o-saobratshajnim-nezgodama-po-politsijskim-upravama-i-opshtinama/). Think about the questions you can answer based on this data.
 
+
 -----------------------------
-© 2019 [Siste Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

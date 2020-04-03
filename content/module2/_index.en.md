@@ -21,4 +21,4 @@ weight: 3
 * to chain data manipulation operations using the pipe operator
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

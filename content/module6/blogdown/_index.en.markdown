@@ -170,4 +170,4 @@ Don't try to view your site in your teeny RStudio viewer, instead click on <span
 
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

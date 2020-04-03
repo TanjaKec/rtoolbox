@@ -17,7 +17,7 @@ There are **two types of CRS**:
 
 1) Geographical
 
-  * specific locations on the surface is defined by three dimensional model of the Earth. 
+  * specific locations on the surface are defined by a three dimensional model of the Earth. 
   * longitude and latitude
 
 2) Projected
@@ -28,14 +28,14 @@ According to the storing technique, spatial data is one of two types:
 
 1)	**Raster data**: composed of grid cells identified by row and column. The whole geographic area is divided into groups of individual cells, which represent an image (satellite images)
 
-2)	**Vector data** are composed of points, polylines, and polygons. For example hospitals, houses etc. are represented by points, while rivers, roads,etc., are represented by polylines. Villages and towns are represented by polygons.
+2)	**Vector data** are composed of points, polylines, and polygons. For example hospitals, houses etc. are represented by points, while rivers, roads, etc., are represented by polylines. Villages and towns are represented by polygons.
 
 When doing spatial analysis you will also deal with attribute data, which contain the relevant information about the spatial data. The analysis will be based on attribute data attached to geospatial data. Such data could be:
 
 * nominal
 * ordinal
 * interval data
-* ratio data,
+* ratio data
 
 ie. attribute or measured type of data.
 
@@ -47,15 +47,15 @@ R has impressive geographic capabilities and can handle different kinds of spati
 -	.shx - has index with offsets
 -	.dbf - relationship file between geometry and attributes (data)
 
-To import a ESRI shapefile into R correctly, all three files must be present in the directory and named the same (except for the file extension).
+To import an ESRI shapefile into R correctly, all three files must be present in the directory and named the same (except for the file extension).
 
-Let us start by reading a shape file of Serbian districts' boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html).
+Let us start by reading a shape file of Serbian districts' boundaries available from [GADM maps and data](https://gadm.org/download_country_v3.html).
 
 First, download the files we will need from the following GitHub repository: <https://github.com/TanjaKec/gadm36_SRB_shp>. Make sure you save the file into your R-Project working directory before you ask R to execute the following
 
 ```
 ## If you don't have sf installed yet, uncomment and run the line below
-#install.packeges("sf")
+#install.packages("sf")
 
 library(ggplot2)
 library(sf)
@@ -76,7 +76,7 @@ ggplot(serbia_districts) +
 
 ![](/day2/SpatialDA/images/serbia.png?width=40pc)
 
-This looks good 😃 Next, we want to add some data to it and do some 'colouring'. We will incorporate information about the Serbian polulation in 2017 given "Serbian_Pop.csv" file.  
+This looks good 😃 Next, we want to add some data to it and do some 'colouring'. We will incorporate information about the Serbian population in 2017 given "Serbian_Pop.csv" file.  
 
 ```
 population <- read.csv("Serbian_Pop.csv")
@@ -107,7 +107,7 @@ ggplot(serbia_pop) +
 
 ![](/day2/SpatialDA/images/SR_pop_2017.png?width=40pc)
 
-Sometimes you might want to present regions in the plot as a set of multi-panel plots. Remember, you can use `facet` facility of `ggplot` library to do so.
+Sometimes you might want to present regions in the plot as a set of multi-panel plots. Remember, you can use the `facet` facility of `ggplot` library to do so.
 
 ```
 ggplot(serbia_pop) +
@@ -121,25 +121,27 @@ ggplot(serbia_pop) +
 
 **Interactive Maps: leaflet**
 
-`Leaflet` is one of the most popular open-source JavaScript libraries for interactive maps that was integrated into R, by a team of people from RStudio. We will illustrate how easy it is to plot a location map using the leaflet package, but you can learn more about this package from [Leaflet for R](https://rstudio.github.io/leaflet/) website.
+`Leaflet` is one of the most popular open-source JavaScript libraries for interactive maps that was integrated into R, by a team of people from RStudio. We will illustrate how easy it is to plot a location map using the leaflet package, but you can learn more about this package from the [Leaflet for R](https://rstudio.github.io/leaflet/) website.
 
 ```{r}
 ## If you don't have leaflet installed yet, uncomment and run the line below
-#install.packeges("leaflet")
+#install.packages("leaflet")
 library(leaflet)
 # Initialize and assign us as the leaflet object
 us <- leaflet() %>%
   # add tiles to the leaflet object
   addTiles() %>%  
   # setting the centre of the map and the zoom level
-  setView(lng = 21.43667, lat = 41.99578, zoom = 15) %>% 
+  setView(lng = 19.665681, lat = 46.100333, zoom = 15) %>%
   # add a popup marker 
-  addMarkers(lng = 21.43551, lat = 41.99405, popup = "<b>Ciao!</b><br><a href='http://balkansmedia.org/innovation-lab/2nd-media-innovation-lab-master-classes-and-presentations'>2nd Media Innovation Lab! 😀</a>")
+  addMarkers(lng = 19.665681, lat = 46.100333, popup = "<b>Ciao!</b><br><a href='https://www.infostudhub.rs'>InfoStudHUB! 😀</a>")
 
 us
 ```
 
-Here is an interesting website which introduces all kind of possibilities when creating maps with the ['leaflet'](https://maptimeboston.github.io/leaflet-intro/). You should check it out and explore further for yourself.
+
+
+Here is an interesting website which introduces all kind of possibilities when creating maps with ['leaflet'](https://maptimeboston.github.io/leaflet-intro/). You should check it out and explore further for yourself.
 
 {{% notice note %}}
 From its original application as a statistical programming language, R has come a long way and has become very powerful in supporting spatial analysis. All R packages include vignettes with explanations of the functions’ syntaxes and often very helpful mini-tutorials that illustrate the practical uses of the functions around related problems. [CRAN Task View for Analysis of Spatial Data ](https://cran.r-project.org/web/views/Spatial.html) provides a list of available libraries in R for geographical mapping that are commonly used when undertaking spatial analysis and mapping projects in R. 
@@ -150,9 +152,9 @@ From its original application as a statistical programming language, R has come 
 
 Practise by doing the following set of exercises:
 
-1)	Read a shape file of Serbian districts’ boundaries avaliable from [GADM maps and data](https://gadm.org/download_country_v3.html) and plot population per square kilometre available form ‘Serbian_Pop.csv’ used in the exercise.
+1)	Read a shape file of Serbian districts’ boundaries available from [GADM maps and data](https://gadm.org/download_country_v3.html) and plot population per square kilometre available form ‘Serbian_Pop.csv’ used in the exercise.
 
-2)	Create a map pointing out your favourite hang-out place using the leaflet package.
+2)	Create a map pointing out your favourite hang-out places using the leaflet package.
 
 
 
@@ -169,4 +171,4 @@ Practise by doing the following set of exercises:
 [Thematic Mapping with tmap](https://map-rfun.library.duke.edu/031_thematic_mapping.html)
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)

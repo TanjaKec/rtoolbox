@@ -3,10 +3,10 @@ date: "2016-04-09T16:50:16+02:00"
 title: Data Visualisation
 output: 
   learnr::tutorial
-weight: 2
+weight: 3
 ---
 
-Most of you, if not all, will be familiar with creating the graphs in Excel. Software such as Excel has a predefined set of menu options for plotting the data that is the focus of the end result: "pretty graph". Those types of menus assume data to be in a format ready for plotting, which when you get raw data is hardly the case. You are probably going to have to organise and wrangle your data to make it ready for effective visualisation. 
+Most of you, if not all, will be familiar with creating graphs in Excel. Software such as Excel has a predefined set of menu options for plotting the data that is the focus of the end result: "pretty graph". Those types of menus assume data to be in a format ready for plotting, which when you get raw data is hardly the case. You are probably going to have to organise and wrangle your data to make it ready for effective visualisation. 
 
 ### Grammar of Graphics
 
@@ -44,13 +44,12 @@ Unlike base graphics, ggplot works with dataframes and not individual vectors.
 The best way to master it is by practising. So let us create a first `ggplot`. 😃
 What we need to do is the following:
 
-- i) Wrangle the data in the format suitable for visualisation.
-
-- ii) "Initialise" a plot with `ggplot()`:
+i. Wrangle the data in the format suitable for visualisation.
+ii. "Initialise" a plot with `ggplot()`:
   
-**ggplot(<span style="color:blue">dataframe</span>, aes(<span style="color:orangered">x = explanatory variable</span>, <span style="color:green">y = resposne variable</span>))**
+**ggplot(<span style="color:blue">dataframe</span>, aes(<span style="color:orangered">x = explanatory variable</span>, <span style="color:green">y = response variable</span>))**
 
-This will draw a blank ggplot, even though the x and y are specified. `ggplot` doesn’t assume the plot you meant to be drawn (a scatterplot). You only specify the data set and columns ie. variables to be used. Alos note that `aes( )` function is used to specify the x and y axes. 
+This will draw a blank ggplot, even though the x and y are specified. `ggplot` doesn’t assume the plot you meant to be drawn (a scatterplot). You only specify the data set and columns ie. variables to be used. Also note that `aes( )` function is used to specify the x and y axes. 
   
 - iii) Add layers with `geom_` functions:
 
@@ -65,7 +64,7 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(gapminder))
 suppressPackageStartupMessages(library(ggplot2))
 
-# wrangle the data (Can you remember what this code do?)
+# wrangle the data (Can you remember what this code does?)
 gapminder_pipe <- gapminder %>%
   filter(continent == "Europe" & year ==  2007) %>%
   mutate(pop_e6 = pop / 1000000)
@@ -75,7 +74,7 @@ ggplot(gapminder_pipe, aes(x = pop_e6, y = lifeExp)) +
   geom_point(col ="red")
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" />
 
 {{% notice tip %}}
 🤓💡 **Tip**: You can use the following code template to make graphs with **ggplot2**:
@@ -105,7 +104,7 @@ ggplot(data = gapminder, mapping = aes(x = continent, fill = continent)) +
 ```
 
 ##### 🗣👥 Confer with your neighbours: 
-Does life expectancy depend upon the population size?
+Does life expectancy depend upon population size?
 
 `y = b_0 + b_1 x + e`
 
@@ -148,7 +147,7 @@ summary(m1)
 
 ##### 👉 Practice ⏰💻: Use gapminder data.
 
-Does the life expectancy depend upon the GDP per capita?
+Does life expectancy depend upon the GDP per capita?
 
 1) Have a glance at the data. (tip: `sample_n(df, n)`)
 
@@ -167,18 +166,18 @@ sample_n(gapminder, 30)
 
 ```
 ## # A tibble: 30 x 6
-##    country                continent  year lifeExp       pop gdpPercap
-##    <fct>                  <fct>     <int>   <dbl>     <int>     <dbl>
-##  1 Lesotho                Africa     1952    42.1    748747      299.
-##  2 Bosnia and Herzegovina Europe     1997    73.2   3607000     4766.
-##  3 Puerto Rico            Americas   2007    78.7   3942491    19329.
-##  4 Pakistan               Asia       2007    65.5 169270617     2606.
-##  5 Sweden                 Europe     1992    78.2   8718867    23880.
-##  6 Ecuador                Americas   1952    48.4   3548753     3522.
-##  7 Switzerland            Europe     1967    72.8   6063000    22966.
-##  8 Namibia                Africa     2007    52.9   2055080     4811.
-##  9 Gabon                  Africa     2007    56.7   1454867    13206.
-## 10 Guinea-Bissau          Africa     1982    39.3    825987      838.
+##    country            continent  year lifeExp      pop gdpPercap
+##    <fct>              <fct>     <int>   <dbl>    <int>     <dbl>
+##  1 Venezuela          Americas   1967    63.5  9709552     9541.
+##  2 Jamaica            Americas   1982    71.2  2298309     6068.
+##  3 Equatorial Guinea  Africa     1957    36.0   232922      426.
+##  4 Mali               Africa     1982    43.9  6998256      618.
+##  5 Kenya              Africa     1997    54.4 28263827     1360.
+##  6 Poland             Europe     1997    72.8 38654957    10160.
+##  7 Hungary            Europe     1987    69.6 10612740    12986.
+##  8 Angola             Africa     1962    34    4826015     4269.
+##  9 West Bank and Gaza Asia       1997    71.1  2826046     7111.
+## 10 Iceland            Europe     1962    73.7   182053    10350.
 ## # … with 20 more rows
 ```
 
@@ -198,7 +197,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_smooth(method = "loess", se = F, col = "limegreen") # change the colour of line
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" />
 
 ##### 😃🙌 Solution: code Q3; simple regression model
 
@@ -260,7 +259,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_text(x = 90000, y = 75, label = "smooth line", col = "limegreen") 
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-8-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-8-1.png" width="768" style="display: block; margin: auto;" />
 
 Note, that we have added text on the plot for the two lines and have edited the plot in terms of legend and its appearance.
 
@@ -293,7 +292,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_text(x = 90000, y = 75, label = "smooth line", col = "dodgerblue3")
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-9-1.png" width="768" style="display: block; margin: auto;" />
 
 {{% notice note %}}
 Note that the legend is added automatically. You can remove it by setting the **legend.position** to `none` from within a `theme()` function.
@@ -337,7 +336,7 @@ Note that the legend is added automatically. You can remove it by setting the **
 ## Warning: Removed 33 rows containing missing values (geom_smooth).
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-10-1.png" width="768" style="display: block; margin: auto;" />
   
 Note that the regression and smooth lines have changed their shapes 😳… all those warnings 😬 What’s going on?! 😲
   
@@ -351,7 +350,7 @@ Thankfully, there is another way to change the limits of the axis without deleti
 coord_cartesian(xlim = c(0, 90000), ylim = c(25, 100))  # zooming in specified limits of the x & y axis
 ```
 
-You can set the breaks on the x axis and label them by using `scale_x_continuous()`. Similarly, you can do it for the y axis? 
+You can set the breaks on the x axis and label them by using `scale_x_continuous()`. Similarly, can you can do it for the y axis? 
 
 Try to play with changing the colour palette. For more options check [Sequential, diverging and qualitative colour scales from colorbrewer.org](https://ggplot2.tidyverse.org/reference/scale_brewer.html).
 
@@ -384,7 +383,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   theme_bw()
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" />
 
 There is a `ggthemes` library of themes that willhelp you create stylish ggplot charts used by different journals like the Wall Street Journal or the Economist. See what other themes you can use by going to [this website]( https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)
 
@@ -413,7 +412,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   theme_wsj()
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-12-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-12-1.png" width="768" style="display: block; margin: auto;" />
 
 You are ready to make publication-ready visualizations in R. 😎 You can go further and explore for yourself to see if you can produce BBC style ggplot charts like those used in the BBC's data journalism. Check out the [BBC Visual and Data Journalism cookbook for R graphics]( https://bbc.github.io/rcookbook/).
 
@@ -438,11 +437,11 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   scale_colour_wsj() +
   theme_wsj() +
   
-  # forms a matrix of scatterplots for each continet
+  # forms a matrix of scatterplots for each continent
   facet_grid(rows = vars(continent))
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-13-1.png" width="768" style="display: block; margin: auto;" />
  
 The main difference between `facet_wrap()` and  `facet_grid()` is that the former can string together ggplots in different facets using a single variable, while the latter can do it for more than one.
 
@@ -483,10 +482,26 @@ gapminder %>%
 
 ##### 😃🙌 Solution: graph 
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" />
+
+```r
+# visualise the information
+library("ggplot2")
+ggplot(gapminder, aes(x = continent, y = lifeExp)) +
+  geom_boxplot(outlier.colour = "hotpink") +
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = .2) +
+  labs (title= "Life Exp. vs. Continent", 
+        x = "Continent", y = "Life Exp.") +
+  theme(legend.position = "none", 
+        panel.border = element_rect(fill = NA, 
+                                    colour = "black",
+                                    size = .75),
+        plot.title=element_text(hjust=0.5))
+```
+
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-15-1.png" width="768" style="display: block; margin: auto;" />
 ##### Case study: NO2 2017 😁
 
-Let's try to compbine everything we have learnt so far and practise using well known to us [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data. 
+Let's try to combine everything we have learnt so far and practise using well known to us [2017-NO2.csv](http://data.sepa.gov.rs/dataset/ca463c44-fbfa-4de9-9a75-790995bf2830/resource/74516688-5fb5-47b2-becc-6b6e31a24d80/download/2017-no2.csv) data. 
 
 Remember this?
 
@@ -531,19 +546,19 @@ new_no2 %>%
           axis.ticks.x = element_blank()) # 
 ```
 
-<img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+<img src="/module2/Visualisation/_index.en_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 ## YOUR TURN 👇
 
 Practise by doing the following set of exercises:
 
-1) Chose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend using to help people get to know the dataset?
+1) Choose a data set from <https://data.gov.rs> that is interesting to you. Import the dataset into R and examine what kinds of variables are there. What plots would you recommend using to help people get to know the dataset?
 
 2) Go back to NO2 2017 case study:
 
   i)	What are the questions you can ask based on the available information within the dataset?
 
-  ii)	What plots would you recommend to use to help in answering those questions?
+  ii)	What plots would you recommend using to help in answering those questions?
 
   iii)	Create appropriate visualisations for i) & ii)
 
@@ -566,4 +581,4 @@ Practise by doing the following set of exercises:
 [ggplot as a creativity engine](http://johnburnmurdoch.github.io/slides/r-ggplot/#/)
 
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 Tatjana Kecojevic

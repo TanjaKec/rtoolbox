@@ -1,0 +1,135 @@
+---
+date: "2016-04-09T16:50:16+02:00"
+title: RMarkdown
+output: 
+  learnr::tutorial
+weight: 1
+---
+
+
+
+<p>R Markdown can help generate:</p>
+<ul>
+<li>HTML documents</li>
+<li>Notebooks in which you’ve run code chunks individually</li>
+<li>PDFs that you can print out to follow along physically with the course</li>
+<li>This entire R course website</li>
+</ul>
+<p>It enables you to:</p>
+<ul>
+<li>save and execute code and display its output</li>
+<li>create high quality reports that could include <a href="https://www.latex-project.org/">LaTeX</a> equations</li>
+</ul>
+<p>What is great about <a href="https://rmarkdown.rstudio.com/">R Markdown</a> documents is that they are fully reproducible and support many static and dynamic output formats, to name a few: PDF, HTML, MS Word, Beamer… You can incorporate narrative text and code of your data analysis to produce an elegantly formatted story telling journey.</p>
+<p>It is a variant of <a href="https://daringfireball.net/projects/markdown/">Markdown</a> that has embedded <strong>R code chunks</strong> (denoted by three back ticks), to be used with <a href="https://yihui.name/knitr/">knitr</a> to make it easy to create reproducible web-based reports.</p>
+<p>R Markdown is a plain text file that has the extension <span style="color:red">.Rmd</span></p>
+<p>To use <strong>R Markdown</strong> you will need to install the package from <a href="https://cran.r-project.org/">CRAN</a> and load it with:</p>
+<pre class="r"><code>install.packages(&quot;rmarkdown&quot;, repos = &quot;http://cran.us.r-project.org&quot;)
+suppressPackageStartupMessages(library(rmarkdown))</code></pre>
+<hr />
+<p>👉 Go to the following GitHub repo to download the material: <a href="https://github.com/TanjaKec/RMarkdown_Intro" class="uri">https://github.com/TanjaKec/RMarkdown_Intro</a></p>
+<hr />
+<p><strong>Starting with RMarkdown</strong></p>
+<p><strong><span style="color:red">Task 1</span>:</strong>
+Open the file <code>RMarkdown_Intro.Rmd</code></p>
+<ul>
+<li><p>Change the title of the Markdown Document from <code>My First Markdown Document</code> to <code>RMarkdown Introduction</code>.</p></li>
+<li><p>Click the <strong>“Knit”</strong> button to see the compiled version of your sample code.</p></li>
+</ul>
+<p><strong>Congratulations! You’ve just Knitted your first Rmd document!!!!</strong> 👍😃</p>
+<hr />
+<p><strong>Basic Text editing</strong></p>
+<p><strong><span style="color:red">Task 2</span>:</strong>
+Let’s format this document further by</p>
+<ul>
+<li><p>Changing the author of the document to your own name</p></li>
+<li><p>Rewriting the first sentence of the document to say &quot;This is my first R Markdown document.</p></li>
+<li><p>Recompiling the document so you can see your changes</p></li>
+</ul>
+<hr />
+<p><strong>Adding a link</strong></p>
+<p>You can turn a word into a link by surrounding it in <strong>hard brackets: [ ]</strong> and then placing the link behind it in <strong>parentheses: ( )</strong>, like this:</p>
+<p><code>[RStudio](www.rstudio.com)</code></p>
+<p><strong><span style="color:red">Task 3</span>:</strong>
+Make GitHub in the following paragraph link to <a href="https://github.com/SisterAnalyst" class="uri">https://github.com/SisterAnalyst</a></p>
+<hr />
+<p><strong>Text formatting</strong></p>
+<p>To embed formatting instructions into your document using Markdown, you
+would surround text by:</p>
+<ul>
+<li><p>one asterisk to make it italic: <em>italic</em></p></li>
+<li><p>two asterisks to make it bold: <strong>bold</strong> and</p></li>
+<li><p>backticks to make it monospaced: <code>monospaced</code>.</p></li>
+</ul>
+<p>To make an ordered list you need to place each item on a new line after a
+number followed by a period followed by a space:
+1. order list
+2. second item</p>
+<p>💡! Note that you need to place a blank line between the list and any paragraphs
+that come before it.</p>
+<p><strong><span style="color:red">Task 4</span>:</strong></p>
+<ul>
+<li>Make the following paragraph in your Rmd document look like this:</li>
+</ul>
+<p>When analysing data… The variables can be one of two broad types:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Attribute variable</strong>: has its outcomes described in terms of its characteristics or
+attributes;</p></li>
+<li><p><strong>Measured variable</strong>: has the resulting outcome expressed in numerical terms.</p></li>
+</ol>
+<ul>
+<li>Make the word Knit in the following paragraph italic.</li>
+</ul>
+<hr />
+<p><strong>Embedding the <code>R</code> code</strong>
+To embed an R code chunk you would use three back ticks:</p>
+<p>
+<p><code  class="r"> ```{r} </code></p>
+<p><code>chunk of code</code></p>
+<p>
+<p><code  class="r"> ``` </code></p>
+<p><strong><span style="color:red">Task 5</span></strong>: Replace the <code>cars</code> data set with the <code>gapminder</code> data set. Don’t forget to load <code>gapminder</code> package using <code>library(gapminder)</code>.</p>
+<hr />
+<p><strong>Prevent printing of the <code>R</code> code</strong></p>
+<p>You can also embed plots by setting <code>echo = FALSE</code> to the code chunk to
+prevent printing of the R code that generates the plot:</p>
+<p>
+<p><code  class="r"> ```{r, echo=FALSE} </code></p>
+<p><code>chunk of code</code></p>
+<p>
+<p><code  class="r"> ``` </code></p>
+<p><strong><span style="color:red">Task 6</span></strong>: Replace the base boxplot of <code>mpg</code> vs. <code>cyl</code> by a <code>ggplot</code>’s boxplot to examine a relationship between <code>continent</code> and <code>lifeExp</code> (remember to use some of the <code>dplyr</code> functions too!).</p>
+<pre class="r"><code>suppressPackageStartupMessages(library(dplyr))
+library(ggplot2)
+# ggplot boxplot
+ggplot(gapminder, aes(x = continent, y = lifeExp)) +
+  geom_boxplot(outlier.colour = &quot;hotpink&quot;) +
+  geom_jitter(position = position_jitter(width = 0.1, height = 0), 
+              alpha = .2) +
+  labs (title= &quot;Life Exp. vs. Continent&quot;, 
+        x = &quot;Continent&quot;, y = &quot;Life Exp.&quot;) +
+  theme(legend.position = &quot;none&quot;, 
+        panel.border = element_rect(fill = NA, 
+                                    colour = &quot;black&quot;,
+                                    size = .75),
+        plot.title=element_text(hjust=0.5))    </code></pre>
+<hr />
+<p><strong>Adding <code>LaTex</code> equations</strong></p>
+<p>Finally, if you wish to add mathematical equations to your Markdown document you can easily embed <a href="LaTeX">LaTeX</a> math equations into your report.</p>
+<p>To <em>display an equation</em> <strong>in its own line</strong> it needs to be surrounded by the double dollar symbol</p>
+<p><code>$$</code> <code>y = a + bx</code> <code>$$</code>,</p>
+<p>or to <em>embed an equation</em> <strong>in line within the text</strong> you would use only one dollar symbol: <code>$y = a + bx$</code>.</p>
+<p><strong><span style="color:red">Task 7</span></strong>: Display the equation in the <em>Including Mathematical Equations</em> paragraph into its own line.</p>
+<p><strong>Congratulations! You have got the basics to start creating your own fabulous dynamic documents… !!!!</strong> 👍😃</p>
+<hr />
+<p>You would definitely find the following useful:</p>
+<ul>
+<li><p><a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">RMarkdown cheatsheet</a></p></li>
+<li><p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">The R Markdown Reference Guide</a></p></li>
+<li><p>Book: <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p></li>
+<li><p><a href="https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/">Getting started with R Markdown</a></p></li>
+<li><p><a href="https://rmarkdown.rstudio.com/authoring_quick_tour.html">R Markdown Quick Tour</a></p></li>
+<li><p><a href="https://www.rstudio.com/resources/videos/advanced-r-markdown-tutorial/">Advanced R Markdown – Tutorial::RStudio Conference 2017</a></p></li>
+</ul>
+<hr />
+<p>© 2020 <a href="https://sisteranalyst.org">Sister Analyst</a></p>

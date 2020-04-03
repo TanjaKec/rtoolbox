@@ -118,18 +118,18 @@ Is the relationship linear? What conclusion(s) can you draw?</p></li>
 <p>😃🙌 Solution: code Q1; sample</p>
 <pre class="r"><code>sample_n(gapminder, 30)</code></pre>
 <pre><code>## # A tibble: 30 x 6
-##    country                continent  year lifeExp      pop gdpPercap
-##    &lt;fct&gt;                  &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
-##  1 Mauritius              Africa     1992    69.7  1096202     6058.
-##  2 Peru                   Americas   1997    68.4 24748122     5838.
-##  3 Iran                   Asia       1982    59.6 43072751     7608.
-##  4 Thailand               Asia       1977    62.5 44148285     1961.
-##  5 Bosnia and Herzegovina Europe     2002    74.1  4165416     6019.
-##  6 Malawi                 Africa     2002    45.0 11824495      665.
-##  7 Canada                 Americas   1952    68.8 14785584    11367.
-##  8 Chile                  Americas   1957    56.1  7048426     4316.
-##  9 Iceland                Europe     1952    72.5   147962     7268.
-## 10 West Bank and Gaza     Asia       1957    45.7  1070439     1827.
+##    country       continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;         &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Turkey        Europe     1957    48.1  25670939     2219.
+##  2 United States Americas   1977    73.4 220239000    24073.
+##  3 Madagascar    Africa     1952    36.7   4762912     1443.
+##  4 Botswana      Africa     1982    61.5    970347     4551.
+##  5 Croatia       Europe     1997    73.7   4444595     9876.
+##  6 Mexico        Americas   1982    67.4  71640904     9611.
+##  7 Ireland       Europe     1962    70.3   2830000     6632.
+##  8 Reunion       Africa     1997    74.8    684810     6072.
+##  9 Zambia        Africa     1997    40.2   9417789     1071.
+## 10 Sudan         Africa     1952    38.6   8504667     1616.
 ## # … with 20 more rows</code></pre>
 <p>We will add layers onto this scatterplot: <code>liveExp</code> vs <code>gdpPercap</code>. We want to superimpose regression line of the best fit and non-parametric loess line that depict a possible relationship between the two variables. That means we will have:</p>
 <ul>
@@ -142,6 +142,8 @@ Is the relationship linear? What conclusion(s) can you draw?</p></li>
   geom_point(alpha = 0.2, shape = 21, fill = &quot;blue&quot;, colour=&quot;black&quot;, size = 5) + # set transparency, shape, colour and size for points
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;maroon3&quot;) + # change the colour of line
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;limegreen&quot;) # change the colour of line</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;
+## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>😃🙌 Solution: code Q3; simple regression model</p>
 <pre class="r"><code>my.model &lt;- lm(gapminder_pipe$lifeExp ~ gapminder_pipe$gdpPercap)
@@ -175,7 +177,7 @@ summary(my.model)</code></pre>
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;limegreen&quot;) + 
  
   # give a title an label axes
-  labs(title = &quot;Life Exp. vs. Population Size&quot;, 
+  labs(title = &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   
   # modify the appearance
@@ -202,7 +204,7 @@ summary(my.model)</code></pre>
   
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;maroon3&quot;) + 
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;dodgerblue3&quot;) + 
-  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+  labs (title= &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   theme(legend.position = &quot;right&quot;, 
         panel.border = element_rect(fill = NA, 
@@ -221,7 +223,7 @@ Note that the legend is added automatically. You can remove it by setting the <s
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;maroon3&quot;) + 
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;dodgerblue3&quot;) + 
-  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+  labs (title= &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   theme(legend.position = &quot;right&quot;, 
         panel.border = element_rect(fill = NA, 
@@ -253,7 +255,7 @@ When using xlim() and ylim(), the points outside the specified range are deleted
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;maroon3&quot;) + 
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;dodgerblue3&quot;) + 
-  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+  labs (title= &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   theme(legend.position = &quot;right&quot;, 
         panel.border = element_rect(fill = NA, 
@@ -264,7 +266,7 @@ When using xlim() and ylim(), the points outside the specified range are deleted
   geom_text(x = 90000, y = 75, label = &quot;smooth line&quot;, col = &quot;dodgerblue3&quot;) +
   
   # change breaks and label them 
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;10K&quot;, &quot;12K&quot;)) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;100K&quot;, &quot;120K&quot;)) +
 
   # change color palette
   scale_colour_brewer(palette = &quot;Set1&quot;) + 
@@ -274,13 +276,13 @@ When using xlim() and ylim(), the points outside the specified range are deleted
 <p><img src="/module3/Visualisation/_index.en_files/figure-html/unnamed-chunk-11-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>There is a <code>ggthemes</code> library of themes that willhelp you create stylish ggplot charts used by different journals like the Wall Street Journal or the Economist. See what other themes you can use by going to <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">this website</a></p>
 <pre class="r"><code>## If you don&#39;t have ggthemes installed yet, uncomment and run the line below
-#install.packeges(&quot;ggthemes&quot;)
+#install.packages(&quot;ggthemes&quot;)
 library(ggthemes)
 ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;darkred&quot;) + 
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;darkgreen&quot;) + 
-  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+  labs (title= &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   theme(legend.position = &quot;right&quot;, 
         panel.border = element_rect(fill = NA, 
@@ -289,7 +291,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
         plot.title=element_text(hjust=0.5)) + 
   geom_text(x = 80000, y = 125, label = &quot;regression line&quot;, col = &quot;darkred&quot;) + 
   geom_text(x = 90000, y = 75, label = &quot;smooth line&quot;, col = &quot;darkgreen&quot;) +
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;10K&quot;, &quot;12K&quot;)) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;100K&quot;, &quot;120K&quot;)) +
 
   # Wall Street Journal theme
   scale_colour_wsj() +
@@ -303,14 +305,14 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
   geom_point(aes(col = continent), alpha = 0.5, shape = 20, size = 3) + 
   geom_smooth(method = &quot;lm&quot;, se = F, col = &quot;darkred&quot;) + 
   geom_smooth(method = &quot;loess&quot;, se = F, col = &quot;black&quot;) + 
-  labs (title= &quot;Life Exp. vs. Population Size&quot;, 
+  labs (title= &quot;GDP per Capita vs. Population Size&quot;, 
         x = &quot;population&quot;, y = &quot;Life Exp.&quot;) + 
   theme(legend.position = &quot;right&quot;, 
         panel.border = element_rect(fill = NA, 
                                     colour = &quot;black&quot;,
                                     size = .75),
         plot.title=element_text(hjust=0.5)) + 
-  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;10K&quot;, &quot;12K&quot;)) +
+  scale_x_continuous(breaks = seq(0, 120000, 20000), labels = c(&quot;0&quot;, &quot;20K&quot;, &quot;40K&quot;, &quot;60K&quot;, &quot;80K&quot;, &quot;100K&quot;, &quot;120K&quot;)) +
   scale_colour_wsj() +
   theme_wsj() +
   
@@ -378,12 +380,13 @@ new_no2 &lt;- no2 %&gt;%
 glimpse(new_no2)</code></pre>
 <pre><code>## Observations: 2,555
 ## Variables: 3
-## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;0…
-## $ place &lt;fct&gt; NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens…
-## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.…</code></pre>
+## $ Datum &lt;chr&gt; &quot;01.01.2017&quot;, &quot;02.01.2017&quot;, &quot;03.01.2017&quot;, &quot;04.01.2017&quot;, &quot;05.01.…
+## $ place &lt;fct&gt; NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_Spens, NS_…
+## $ no2   &lt;dbl&gt; 22.89, 32.94, 14.86, 22.73, 20.89, 10.47, 9.58, 15.99, 14.46, 9…</code></pre>
 <pre class="r"><code>new_no2 %&gt;% 
   group_by(place) %&gt;% 
-  summarise(mean_no2 = mean(!is.na(no2))) %&gt;% # !is.na(): is not NA; omits the missing values
+  filter(!is.na(no2)) %&gt;% 
+  summarise(mean_no2 = mean(no2)) %&gt;% # !is.na(): is not NA; omits the missing values
   ggplot(aes(x = place, y = mean_no2, fill = place)) + # fill: colours each bar differently   
     geom_bar(stat = &quot;identity&quot;) +
     xlab(&quot;Place&quot;) + 
@@ -414,4 +417,4 @@ glimpse(new_no2)</code></pre>
 <p><a href="https://bbc.github.io/rcookbook/">BBC Visual and Data Journalism cookbook for R graphics</a></p>
 <p><a href="http://johnburnmurdoch.github.io/slides/r-ggplot/#/">ggplot as a creativity engine</a></p>
 <hr />
-<p>© 2020 Tatjana Kecojevic</p>
+<p>© 2020 <a href="https://sisteranalyst.org">Sister Analyst</a></p>

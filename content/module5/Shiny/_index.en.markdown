@@ -56,6 +56,5 @@ Go further: [Shiny Dashboard](https://rstudio.github.io/shinydashboard/)
 ### Happy R Programming! 📢 
 
 
-
 -----------------------------
-© 2019 [Sister Analyst](https://sisteranalyst.org)
+© 2020 [Sister Analyst](https://sisteranalyst.org)
