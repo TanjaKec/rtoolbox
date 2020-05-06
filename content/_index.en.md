@@ -20,9 +20,6 @@ Let us take boring flat data and bring it to life through visualization."
 
 > **R** together with **RStudio** is the best data science tool! It is open source and free software that is available to anyone with a desire to discover, learn, explore, experience, expand and share the algorithms of their data science journey.  
 
-##### To book your place go here [👉📩](https://sisteranalyst.org)
-
-
 -----------------------------
 © 2020 [Sister Analyst](https://sisteranalyst.org)
 
