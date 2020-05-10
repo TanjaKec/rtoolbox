@@ -14,8 +14,9 @@ It is the first big hurdle to dealing with data in R. You are most likely to hav
 | description | 👇😃 |
 | --------- | ----------------------- |
 | Import csv and Excel spreadsheet data files: | [![Slides](/Showcases/Tricks_Tips/images/xaringan_icon.png?width=3pc)](https://importdata2r.netlify.app) |
+| plot time series using ggplot2: |  [![Slides](/Showcases/Tricks_Tips/images/xaringan_icon.png?width=3pc)](https://tsggplot.netlify.app/) |
 
-This data is used in [**COVID-19 Casestudy**](https://dataliteracy.rbind.io/showcases/covid-19/)
+All of this is used in [**COVID-19 Casestudy**](https://dataliteracy.rbind.io/showcases/covid-19/)
 
 
 

@@ -2,7 +2,7 @@
 chapter: true
 pre: <b>8. </b>
 title: Our Stories
-weight: 8
+weight: 9
 ---
 
 Hear some inspiering stories 🗣 
