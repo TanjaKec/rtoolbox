@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>/publications/every_day/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/module1/installr/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
@@ -93,7 +98,7 @@
   </url>
   
   <url>
-    <loc>/showcases/tricks_tips/</loc>
+    <loc>/tricks_tips/tricks_tips/</loc>
     <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
@@ -148,7 +153,17 @@
   </url>
   
   <url>
+    <loc>/publications/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/our_podcast/</loc>
+  </url>
+  
+  <url>
+    <loc>/tricks_tips/</loc>
+    <lastmod>2016-04-09T16:50:16+02:00</lastmod>
   </url>
   
   <url>
