@@ -1,8 +1,8 @@
 ---
 chapter: true
-pre: <b>7. </b>
+pre: <b>11. </b>
 title: Tricks & Tips
-weight: 10
+weight: 11
 ---
 
 ### Tricks and Tips

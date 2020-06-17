@@ -37,10 +37,12 @@ CINS continue to apply data journalism practice and recently published article r
 
 <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🔎Pogledajte odakle dolaze donatori <a href="https://twitter.com/sns_srbija?ref_src=twsrc%5Etfw">@sns_srbija</a> <a href="https://twitter.com/socijalisti?ref_src=twsrc%5Etfw">@socijalisti</a> i <a href="https://twitter.com/demokrate?ref_src=twsrc%5Etfw">@demokrate</a> i ko je prikupio najviše para od donacija u periodu od sedam godina 💸👇<a href="https://t.co/2HHXrSLSLC">https://t.co/2HHXrSLSLC</a></p>&mdash; CINS (@CINSerbia) <a href="https://twitter.com/CINSerbia/status/1264812939401400320?ref_src=twsrc%5Etfw">May 25, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+---
 
+Presentation for [eRum2020](https://2020.erum.io).
 
-```{r embed2, out.extra='style="border: none;"', out.width='99%', fig.cap="Embedded YouTube video", echo = FALSE}
-knitr::include_url('https://cins.rs/')
+```{r embed2, out.extra='style="border: none;"', out.width='99%', fig.cap="Embedded eRum presentation", echo = FALSE}
+knitr::include_url('https://rtoolboxerum.netlify.app/#1')
 ```
 
 
